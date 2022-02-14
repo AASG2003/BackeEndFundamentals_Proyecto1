@@ -1,12 +1,18 @@
-const express = require("express")
+const express = require('express')
 const path = require("path")
 const userRoutes = require("./routes/users")
-const app = express()
 
+function views(document){
+    return path.join(__dirname,"views",document)
+}
+
+const app = express()
 
 app.use(express.text())
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
+app.use(express.static('views'))
+
 app.use(userRoutes)
 
 app.get('/',function(peticion,respuesta){

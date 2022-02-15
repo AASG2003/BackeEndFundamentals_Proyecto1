@@ -11,7 +11,8 @@ const app = express()
 app.use(express.text())
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
-app.use(express.static('views'))
+app.use(express.static("static"))
+app.use(express.static("views"))
 
 app.use(userRoutes)
 

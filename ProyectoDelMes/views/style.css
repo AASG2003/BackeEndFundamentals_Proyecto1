@@ -63,3 +63,23 @@
     margin: 16px 0;
     font-size: 16px;
   }
+
+  .user{
+    margin: 50px 20px;
+    background-color: aliceblue;
+    padding: 10px;
+    font-family: sans-serif;
+  }
+  .user img{
+    width: 50px;
+  }
+  .name{
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  h1{
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: white;
+  }

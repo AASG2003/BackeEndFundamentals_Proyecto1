@@ -25,9 +25,15 @@ router.post('/registro',async function(request,response){
 router.get("/users",(req,res)=>{
     return res.sendFile(views("users.html"))
 })
+
 router.get("/api/users",async (req,res)=>{
     var users = await userController.readAll()
     return res.json(users)
 })
 
+router.delete("/api/users/:id",async (req,res)=>{
+    const id = req.params.id
+    var user = await userController.delete(id)
+    return res.json(user)
+})
 module.exports = router

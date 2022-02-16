@@ -4,37 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel ="stylesheet" href = "css/style.css">
-    <title>Document</title>
+    <link rel ="stylesheet" href = "css/users.css">
 </head>
 <body>
-    <h1>Users</h1>
-    <div id="users"></div>
+    <div class="contenedor">
+		<nav>
+			<a class="logotipo" href="/">Inicio</a>
+			<div class="enlaces">
+				<a href="/registro">Ir a registro</a>
+				<a href="/users">Usuarios</a>
+			</div>
+		</nav>
 
-    <!-- Esto se ejecuta en el navegador -->
-    <script class = "">
-        console.log("Hola mundo")
-        //Armando peticion
-        // Utilizando fetch
-        // fetch: Ir y traer algo
-        //fetch("http://localhost:4000/api/users") //Esto es valido
-        fetch("/api/users")
-        .then(function(respuesta){
-            console.log(respuesta)
-            console.log("hola")
-            return respuesta.json()
-        })
-        .then(function(data){
-            console.log(data)
-            var users = document.getElementById("users")
-            for(var user of data){
-                users.innerHTML = users.innerHTML + `<div class="user">
-                        <p class="name">${user.name}</p>
-                        <p>${user.email}</p>
-                        <img src="${user.profile_pic}">
-                    </div>`
-            }
-        })
-    </script>
+		<section class="grid">
+            <h1>Usuarios</h1>
+            <div id="users"></div>
+            <section class="grid">
+            <script>
+                fetch("/api/users")
+                .then(function(respuesta){
+                    console.log(respuesta)
+                    console.log("hola")
+                    return respuesta.json()
+                })
+                .then(function(data){
+                    console.log(data)
+                    var users = document.getElementById("users")
+                    for(var user of data){
+                        users.innerHTML = users.innerHTML + `
+                        <div class = "card">
+				            <img src="${user.profile_pic}" alt="">
+                            <div>
+                                <p>${user.name}</p>
+                                <p>${user.email}</p
+                            </div>
+				            <div class="botones">
+					            <a href="/api/users/:id" id = ${user.id} method = DELETE class="boton primario">Borrar</a>
+					            <a href="#" class="boton secundario">Editar</a>
+				            </div>
+			            </div>
+                        `
+                    }
+                })
+            </script>
+		</section>
+	</div>
 </body>
 </html>

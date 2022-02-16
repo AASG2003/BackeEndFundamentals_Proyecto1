@@ -4,33 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel ="stylesheet" href = "css/style.css">
+    <link rel ="stylesheet" href = "css/registro.css">
 </head>
 <body>
-    <form class = "form-register" id="formulario" method="POST" action="/registro" >
-        <h4>Formulario registro</h4>
-        <input class = "controls" type="text" name="name" placeholder="Ingrese su nombre">
-        <input class = "controls" type="email" name="email" placeholder="Ingrese su email">
-        <input class = "controls" type="date" name="birthday" placeholder="Ingrese su fecha de nacimiento">
-        <button class ="botons">Enviar</button>
-    </form>
-
-    <script>
-        //const formulario = document.getElementById("formulario")
-
-        // formulario.onsubmit = function(envio){
-        //     //Cancelamos el envío
-        //     envio.preventDefault()
-        //     const data = {
-        //         name: envio.target.name.value,
-        //         email:envio.target.email.value,
-        //         birthday:envio.target.birthday.value,
-        //     }
-
-        //     console.log(data)
-
-        //     //TODO: Enviamos la información por JSON
-        // }
-    </script>
+    <div class="contenedor">
+		<nav>
+			<a class="logotipo" href="/">Inicio</a>
+			<div class="enlaces">
+				<a href="/registro">Ir a registro</a>
+				<a href="/users">Usuarios</a>
+			</div>
+		</nav>
+        <form class = "form-register" id="formulario" method="POST" action="/registro" >
+            <h4>Formulario registro</h4>
+            <input class = "controls" type="text" name="name" placeholder="Ingrese su nombre">
+            <input class = "controls" type="email" name="email" placeholder="Ingrese su email">
+            <input class = "controls" type="date" name="birthday" placeholder="Ingrese su fecha de nacimiento">
+            <button class ="botons">Enviar</button>
+        </form>
+	</div>  
 </body>
 </html>

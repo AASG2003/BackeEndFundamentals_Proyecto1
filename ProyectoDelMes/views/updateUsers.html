@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel ="stylesheet" href = "css/registro.css">
+    <script type="text/javascript" src="/js/users.js"></script>
 </head>
 <body>
     <div class="contenedor">
@@ -15,9 +16,10 @@
 				<a href="/users">Usuarios</a>
 			</div>
 		</nav>
-        <form class = "form-register" id="formulario" method="POST" action="/registro" >
+        <form class = "form-register" id="formulario" method="POST" action="/actualizarUser" >
             <h4>Formulario registro</h4>
-            <h3>Nuevo Usuario</h3>
+            <h3>Actualizacion de usuario</h3>
+            <h3></h3>
             <input class = "controls" type="text" name="name" placeholder="Ingrese su nombre">
             <input class = "controls" type="email" name="email" placeholder="Ingrese su email">
             <input class = "controls" type="date" name="birthday" placeholder="Ingrese su fecha de nacimiento">

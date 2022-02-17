@@ -38,4 +38,13 @@ async function del(tableName,data){
     }
 }
 
-module.exports = {query,insert,del}
+async function update(tablename, id, data){
+    try{
+        await query(`UPDATE ${tablename} SET birthday = '${data.birthday}'  id=${id}`)
+        return data
+    }catch(error){
+        return error
+    }
+}
+
+module.exports = {query,insert,del,update}

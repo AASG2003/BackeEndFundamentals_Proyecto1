@@ -15,37 +15,10 @@
 				<a href="/users">Usuarios</a>
 			</div>
 		</nav>
-
-		<section class="grid">
-            <h1>Usuarios</h1>
-            <div id="users"></div>
-            <section class="grid">
-            <script>
-                fetch("/api/users")
-                .then(function(respuesta){
-                    console.log(respuesta)
-                    console.log("hola")
-                    return respuesta.json()
-                })
-                .then(function(data){
-                    console.log(data)
-                    var users = document.getElementById("users")
-                    for(var user of data){
-                        users.innerHTML = users.innerHTML + `
-                        <div class = "card">
-				            <img src="${user.profile_pic}" alt="">
-                            <div>
-                                <p>${user.name}</p>
-                                <p>${user.email}</p
-                            </div>
-				            <div class="botones">
-					            <a href="/api/users/:id" id = ${user.id} method = DELETE class="boton primario">Borrar</a>
-					            <a href="#" class="boton secundario">Editar</a>
-				            </div>
-			            </div>
-                        `
-                    }
-                })
+        <h1>Usuarios</h1>
+		<section class="grid" id ="users">
+            <script src = "/js/users.js" type="text/javascript">
+                mostrarUsuarios()
             </script>
 		</section>
 	</div>

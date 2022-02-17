@@ -7,6 +7,9 @@
   
   body {
     background-image: url('fondo.jpg');
+    color: white;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
     /* font-family: 'Roboto', sans-serif;
     -webkit-transition: .3s ease all;
     transition: .3s ease all; */
@@ -88,7 +91,7 @@
         -ms-flex-align: end;
             align-items: flex-end;
     position: relative;
-    min-height: 195px;
+    min-height: 300px;
     margin-top: 50px;
     -webkit-transition: .3s ease all;
     transition: .3s ease all;
@@ -143,24 +146,14 @@
     background: #ACABAB;
   }
 
-  .user{
-    margin: 50px 20px;
-    background-color: aliceblue;
-    padding: 10px;
-    font-family: sans-serif;
-  }
-
-  .user img{
-    width: 50px;
-  }
-
-  .name{
-    font-weight: bold;
-    font-size: 20px;
-  }
-
   h1{
     font-size: 22px;
     margin-bottom: 20px;
     color: white;
+    margin-top: 20px;
+  }
+  
+  .grid .card .text {
+    color: white;
+    
   }

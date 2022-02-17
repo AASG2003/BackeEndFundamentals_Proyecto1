@@ -36,4 +36,11 @@ router.delete("/api/users/:id",async (req,res)=>{
     var user = await userController.delete(id)
     return res.json(user)
 })
+
+router.get("/updateUsers",(req,res)=>{
+    return res.sendFile(views("updateUsers.html"))
+})
+
+
+
 module.exports = router
